@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Shift left - process overview</title>
+		
+		<meta name="author" content="Evgeni Kostadinov">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Shift left</h1>
+					<h3>process overview</h3>					
+					<img width="400" height="200" data-src="images/sls1.jpg" >
+				</section>
+
+				<section>
+					<section>
+						<h2>Activities</h2>
+						<img width="400" height="200" data-src="images/sls2.png" >
+					</section>
+					<section>
+						<ul> What to expect from now on:
+							<li>Plan and create test cases in advance</li>
+							<li>Support a periodic cycle of integration testing for the components/applications under change </li>
+							<li>Prioritize, process, and resolve feedback by development teams within the feedback loop </li>
+							<li><b style="color:red;">Whatever testing you can perform shifts left </b> </li>
+						</ul>
+					</section>
+					<section>
+						<ul> What to expect from now on:
+							<li>Gather details about testing priorities and focus</li>
+							<li>Identify types of tests to be performed</li>
+							<li>Prepare Requirement Traceability Matrix (RTM)</li>
+							<li>Identify test environment details where testing is supposed to be carried out</li>
+							<li>Automation feasibility analysis (if required)</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Simple SDLC phases</h2>
+						<img width="450" height="300" data-src="images/SDLC.jpg">
+					</section>
+					<section id="fragments">
+						<h2>Requirements</h2>
+						<p>Meetings with managers, stake holders and users are held in order to determine the requirements like:</p>
+						<p class="fragment"> Who is going to use the system? How will they use the system? </p>	
+						<p class="fragment">What data should be input into the system?   </p>	
+						<p class="fragment">What data should be output by the system?   </p>	
+						<p class="fragment"> Assure their <b style="color:red;">testability</b> </p>
+					</section>
+					<section>
+						<h2>Design</h2>
+						<ul>
+							<li>In this phase the testers comes up with the <b style="color:red;">Test strategy</b>, where they mention what to test, how to test</li>
+							<li>Define <a href="http://www.tutorialspoint.com/software_testing_dictionary/exit_criteria.htm">Exit Criteria</a> </li>
+						</ul>
+					</section>
+					<section>
+						<h2>Code</h2>
+						<ul>
+							<li>Test environment Setup</li>
+							<li>Low level Test case development</li>
+							<li><a href="https://en.wikipedia.org/wiki/Unit_testing">Unit</a> and <a href="https://en.wikipedia.org/wiki/Integration_testing">Integration</a> tests</li>
+						</ul>
+					</section>					
+					<section>
+						<h2>Test</h2>
+						<ul>
+							<li>Test execution</li>
+							<li>Test <b style="color:red;">reporting</b></li>
+							<li><a href="https://en.wikipedia.org/wiki/Acceptance_testing">UAT</a></li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Align with QA</h2>				
+						<img width="450" height="300" data-src="images/testing.gif">
+					</section>
+					<section>
+						<ul> Main goals of testing during the initial phases are to
+							<li>Determine that the requirements fairly represent what the user needs</li>
+							<li>Determine that the needs have been defined and documented</li>
+							<li>Verify that a cost/benefit study has been performed and that it is reasonable</li>
+							<li>Determine that the business problem has been solved</li>
+							<li>Verify that the control requirements have been specified</li>
+							<li>Verify that a reasonable process was followed in developing the business solution</li>
+							<li>Verify that a reasonable alternative was selected among the most probable alternative solutions</li>
+						</ul>
+					</section>
+					<section >
+						<h2>QA flow</h2>
+						<p class="fragment">QAs meets with Business/Design/Whoever in order to understand what to test against</p>
+						<p class="fragment">QA will carefully review any Business Requirement Documents (SoW)</p>
+						<p class="fragment">Based on the details from the above, QA will start writing high test cases, usually starting with UI test cases and then going into integration test cases afterwards</p>
+						<p class="fragment">All through the steps above, QA needs to check with Business to get a <b style="color:green;">stamp of approval</b> on the test cases being written!</p>						
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Considerations</h2>
+						<img width="450" height="300" data-src="images/considerations.gif">
+					</section>
+					<section>
+						<h2>Overall </h2>
+						<ul>
+							<li>Identify feedback velocity and means to measure it </li>
+							<li>Scope of automation pipeline (build, deploy, test) </li>
+							<li>Decide which changes will improve team’s success (versus introduce functionality) </li>
+							<li>Continuously improve and plan for next steps (they will be needed) </li>		
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+						<h2>THANK YOU!</h2>						
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
