@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Performance Testing</title>
+
+		<meta name="description" content="Presentation about Automation testing with JAVA">
+		<meta name="author" content="Evgeni Kostadinov">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/progress.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Performance testing</h1>
+					<h3>Goal based methodology</h3>
+					<p>
+						<img width="600" height="300" data-src="../images/14/14s1.jpg">
+					</p>
+				</section>
+
+				<section style="text-align: left;">
+					<h4 style="font-style:italic; text-decoration: underline;">TABLE OF CONTENTS</h4>
+					<ul>
+						<li>Performance vs. Load vs. Stress Testing – Main Concepts</li>
+						<li>Testing Tools (Web and API)</li>
+						<li>Visual Studio testing tools – Short Overview </li>					
+						<li>Taurus</li>
+					</ul>					
+					<img style="margin-top:10%;margin-left:30%;" width="600" height="300" data-src="../images/14/14s2.jpg">						
+				</section>
+							
+				<section>
+					<section>
+						<h2>Main Concepts</h2>
+						<img width="400" height="300" src="../images/14/14s3.png">
+					</section>
+					<section>
+						<h2>Performance vs. Load vs. Stress Testing</h2>					
+						<ul> Different things done for different purposes - in many cases they can be done: 
+							<li>By the same people </li>							
+							<li>With the same tools </li>
+							<li>At virtually the same time as one another</li>
+						</ul>		
+						<img width="400" height="200" src="../images/14/14s4.jpg">						
+					</section>	
+					<section>
+						<h2>The Simplest Distinction</h2>
+						<ul>							
+							<li>
+								<b>Performance Testing </b>
+								<ul>
+									<li>How fast is the system?</li>
+								</ul>
+							</li>
+							<li>
+								<b>Load Testing</b>
+								<ul>
+									<li>How much load can the system process?</li>
+								</ul>
+							</li>
+							<li>
+								<b>Stress testing</b>
+								<ul>
+									<li>Testing with conditions beyond the normally expected ones</li>
+									<li>Under what conditions the system will fail?</li>
+								</ul>
+							</li>
+						</ul>
+						<img width="350" height="150" src="../images/14/14s14.jpg">
+					</section>					
+				</section>
+				
+				<section>
+					<section>
+						<h2>Performance Testing</h2>
+						<img width="400" height="300" src="../images/14/14dyno.png">
+					</section>
+					<section>
+						<h2>Performance Testing </h2>					
+						<ul> 
+							<li>Performance testing is the process of determining the speed or effectiveness of a computer, network, software program or device</li>							
+							<li>
+								Before going into the details, we should understand the factors that governs Performance testing:
+								<ul>
+									<li>Throughput</li>
+									<li>Response Time</li>
+									<li>Tuning</li>
+									<li>Benchmarking</li>
+								</ul>
+							</li>
+						</ul>						
+						<img style="margin-top:-10%;margin-left:30%;" width="400" height="250" src="../images/14/14s5.jpg">	
+					</section>
+					<section>
+						<h2>Performance Testing (2)</h2>					
+						<ul> Throughput 
+							<li>Capability of a product to handle multiple transactions in a give period. Represents the number of requests/business transactions processed by the product in a specified time duration </li>							
+							<li>As the number of concurrent users increase, the throughput increases almost linearly with the number of requests </li>
+						</ul>	
+						<img style="margin-top:-5%;margin-left:30%;" width="400" height="250" src="../images/14/14s6.jpg">
+					</section>
+					<section>
+						<h2>Performance Testing (3)</h2>
+						<ul>							
+							<li><b>Response Time</b>- equally important to find out how much time each of the transactions took to complete. Defined as the delay between the point of request and the first response from the product. The response time increases proportionally to the user load</li>
+							<li><b>Tuning</b>- the procedure by which product performance is enhanced by setting different values to the parameters of the product, operating system and other components. Tuning improves the product performance without having to touch the source code of the product. FYI - There is also code tuning</li>							
+						</ul>
+					</section>
+					<section>
+						<h2>Performance Testing (4)</h2>
+						<ul>
+							<li><b>Benchmarking</b> - very well-improved performance of a product makes no business sense if that performance does not match up to the competitive products. A careful analysis is needed to chalk out the list of transactions to be compared across products so that an apple-apple comparison becomes possible</li>
+						</ul>
+						<img width="400" height="250" src="../images/14/14s7.jpg">
+					</section>
+					<section>
+						<h2>Performance Testing (5)</h2>
+						<ul>
+							What is Performance Testing? 							
+							<li>Determines or validates the speed, scalability, and/or stability characteristics of the system</li>
+							<li>Provides stakeholders with information about the quality of the product or service under test </li>
+							<li>It is also the superset of other classes of performance-related testing (such as load and stress testing)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Performance Testing (6)</h2>
+						<ul>
+							The goal of performance testing is not to find bugs, but to: 
+							<li>Eliminate bottlenecks</li>
+							<li>Establish a baseline for future regression testing </li>
+							<li>Determine compliance with performance goals and requirements</li>
+						</ul>
+						(Usually performed over a software that is already stable enough) <br>
+						<img width="600" height="250" src="../images/14/14s8.png">
+					</section>
+					<section>
+						<h2>Performance Testing (7)</h2>
+						<ul>
+							A variety of performance testing metrics is used in practice – e.g. 
+							<li>Requests Per Second</li>
+							<li>Bytes Per Second </li>
+							<li>Latency</li>
+							<li>Maximum Concurrency</li>
+							<li>Time to first byte</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Performance Testing (8)</h2>
+						<ul>
+							Some popular tools for performance testing are: 
+							<li>VisualStudio (Ultimate)</li>
+							<li>JMeter</li>
+							<li><a href="http://opensta.org/">OpenSTA</a></li>
+							<li><a href="https://www.joedog.org/siege-home/">Siege</a></li>
+							<li><a href="http://httpd.apache.org/docs/2.2/programs/ab.html">ab</a></li>
+							<li><a href="http://www.labs.hpe.com/research/linux/httperf/">httperf</a></li>
+							<li><a href="http://grinder.sourceforge.net/">The Grinder</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Performance Testing (9)</h2>
+						Core Performance Testing Process <br>
+						<img width="600" height="500" src="../images/14/14s9.jpg">
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Load Testing</h2>
+						<img width="400" height="300" src="../images/14/14load.jpg">
+					</section>
+					<section>
+						<h2>Load Testing</h2>					
+						<ul>
+							What is Load Testing? 
+							<li>Testing performance characteristics of an application under specific volumes of load</li>
+							<li>Usually a range of the upper and lower limits expected by the business </li>
+						</ul>		
+					</section>
+					<section>
+						<h2>Load Testing (2)</h2>					
+						<ul> 
+							Goals are to improve: 
+							<li>Performance - reduce the time needed to execute a request </li>							
+							<li>Scalability - exceed the number of concurrent users anticipated at peak load in production</li>
+							<li>Stability - reduce component memory leaks and system crashes </li>
+						</ul>		
+						<img width="500" height="200" src="../images/14/14s10.jpg">
+					</section>
+					<section>
+						<h2>Load Testing (3)</h2>					
+						<ul> 
+							Many measurements can be used for Load Testing Metrics
+							<li>Average Response Times</li>							
+							<li>Peak Response Times</li>
+							<li>Error Rates</li>							
+							<li>Throughput</li>
+							<li>Requests per Second</li>							
+							<li>Concurrent Users </li>
+						</ul>						
+					</section>
+					<section>
+						<h2>Load Testing (4)</h2>
+						<ul>
+							Load Testing Tools 
+							<li>
+								Open Source Tools
+								<ul>
+									<li>JMeter</li>
+									<li>ab http_load</li>
+									<li>The Grinder</li>
+									<li>Siege</li>
+								</ul>
+							</li>
+							<li>
+								Commercial Tools 
+								<ul>
+									<li><a href="http://www8.hp.com/us/en/software-solutions/loadrunner-load-testing/">Load Runner</a> </li>
+									<li><a href="http://www.radview.com/webload-download/">Web Load</a></li>
+									<li>Third-party services</li>
+								</ul>
+							</li>							
+						</ul>
+					</section>
+					<section>
+						<h2>Load Testing (5)</h2>
+						<ol>	
+							Core Load Testing Process 
+							<li>Identify performance acceptance criteria </li>
+							<li>Identify key scenarios</li>
+							<li>Create a workload model</li>
+							<li>Identify the target load levels</li>
+							<li>Identify metrics</li>
+							<li>Design specific tests </li>
+							<li>Run tests </li>
+							<li>Analyze the results</li>
+						</ol>	
+						<img width="400" height="150" src="../images/14/14s11.jpg">
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Stress Testing</h2>
+						<img width="300" height="300" src="../images/14/14stress.jpg">
+					</section>
+					<section>
+						<h2>Stress Testing</h2>					
+						<ul> 
+							What is Stress Testing? 
+							<li>Determining an application’s robustness, availability, and reliability - under extreme levels of load </li>
+							<li>Testing while the product is subjected to other stressful conditions e.g. - limited memory, insufficient disk space or server failure</li>
+						</ul>						
+					</section>
+					<section>
+						<h2>Stress Testing (2)</h2>					
+						<ul> 
+							Goals are to
+							<li>identify application issues that arise or become apparent only under extreme conditions</li>
+							<li> like - heavy loads, high concurrency, or limited computational resources, etc.</li>
+						</ul>	
+						<img width="500" height="300" src="../images/14/14s12.jpg">
+					</section>
+					<section>
+						<h2>Stress Testing (3)</h2>					
+						<img width="450" height="550" src="../images/14/14s13.jpg">						
+					</section>					
+				</section>
+				
+				<section>
+					<section>
+						<h2>Visual Studio testing tools</h2>
+						<img width="400" height="300" src="../images/14/14vs.jpg">
+					</section>
+					<section>
+						<h2>VS tools</h2>					
+						<ul> 
+							<li>
+								Used for testing functionality and performance 
+								<ul>
+									<li>For web pages, web applications, web sites, web services, and combination of all of these</li>
+								</ul>
+							</li>							
+							<li>
+								Can be created by recording the HTTP requests and events 
+								<ul>
+									<li>During user interaction with the web application </li>
+									<li>The recording also captures: Web page redirects, validations, view state information, authentication,etc. </li>
+								</ul>
+							</li>
+						</ul>						
+					</section>
+					<section>
+						<h2>VS tools (2)</h2>					
+						<ul> 
+							<b>Validation rules</b> are predefined criteria which the information contained in the response has to pass through 
+							<li>Used for validating the form field names, texts, and tags in the requested web page </li>						
+							<li>We can validate the results or values against the expected result as per the business needs</li>
+							<li>Also used for checking the processing time taken for the HTTP request </li>
+						</ul>						
+					</section>
+					<section>
+						<h2>VS tools (3)</h2>					
+						<ul> 
+							Extraction Rules
+							<li>Used for collecting the data from the web pages during requests and responses </li>							
+							<li>Helps us in testing the functionality and expected result from the response </li>
+						</ul>	
+						<img width="300" height="200" src="../images/14/14s15.jpg">
+					</section>
+					<section>
+						<h2>VS tools (4)</h2>
+						<ul>							
+							<li>
+								Web Performance Tests require a data source 
+								<ul>							
+									<li>Used for populating data to the test methods </li>
+									<li>Could be a database, a spreadsheet, or an XML data source</li>
+								</ul>
+							</li>
+							<li>
+								Data binding mechanism 
+								<ul>							
+									<li>Takes care of fetching the data from the source and providing it to the test methods </li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>VS tools (5)</h2>
+						<ul>							
+							<li>
+								Simple <b>Web Performance</b> Tests  
+								<ul>							
+									<li>Generate and execute the test as per the recording with a series of valid flows of events</li>
+									<li>Once the test is started there won't be any intervention and it is not conditional</li>
+								</ul>
+							</li>
+							<li>
+								<b>Coded</b> Web Performance Tests
+								<ul>							
+									<li>More complex but provide a lot of flexibility </li>
+									<li>Used for conditional execution based on values </li>
+									<li>Can be created manually or generated with a web performance test recording tool </li>
+									<li>Using the generated code, we can control the flow of test events by customizing the code </li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>VS tools (6)</h2>
+						<ul>	
+							The web <b>Test recorder</b> is used mainly to record all the actions performed while browsing web pages 
+							<li>Records all requests and responses</li>
+							<li>Helps us to find out if the request produces the expected result as per the requirement with different scenarios</li>
+						</ul>
+						<img width="300" height="200" src="../images/14/14s16.jpg">
+					</section>
+					<section>
+						<h2>VS tools (7)</h2>
+						<ul>	
+							When running the Test main elements are 
+							<li>Web Browser</li>
+							<li>Requests</li>
+							<li>Response</li>
+							<li>Context</li>
+							<li>Details</li>
+						</ul>
+					</section>					
+					<section>
+						<h2>VS tools (8)</h2>
+						Sending Requests <br>
+						<ul>							
+							<li>
+								HTTP-<b>GET</b> (Hypertext Transfer Protocol-GET) 
+								<ul>							
+									<li>Appends the query strings to the URL </li>
+								</ul>
+							</li>
+							<li>
+								HTTP-<b>POST</b> (Hypertext Transfer ProtocolPOST) 
+								<ul>							
+									<li>Passes the name and value pairs in the body of the HTTP request message </li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>VS tools (9)</h2>
+						Query Strings and WebTest Editor <br>
+						<ul>							
+							<li>The Query string is the name and the value pair that is created out of the parameters and the data used in web testing</li>
+							<li>
+								The editor shows the tree view of all the requests captured during recording 
+								<ul>							
+									<li>Exposes the different properties of requests and the parameters for each request</li>
+									<li>Extraction and Validation rules can be set</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>VS tools (10)</h2>
+						Property Levels  <br>
+						<ul>	
+							There are different levels of properties that we can set using the WebTest editor on the recorded requests 
+							<li>WebTest root level </li>
+							<li>Request level properties</li>
+							<li>Properties for a request parameter</li>
+							<li>Setting the extraction and validation rules for the responses</li>
+						</ul>
+					</section>
+					<section>
+						<h2>VS tools (11)</h2>						
+						<ul>	
+							Load Test Wizard
+							<li>Test project should be created first</li>
+							<li>Then the new Load Test is added - this opens the wizard and guides us to create the test</li>
+							<li>
+								Scenarios are used for simulating actual user tests with predefined parameters:
+								<ul>
+									<li>Think Time</li>
+									<li>Load Pattern</li>
+									<li>Test Mix model</li>
+									<li>Test Mix </li>
+									<li>Network Mix </li>
+									<li>Browser Mix</li>
+								</ul>
+							</li>
+						</ul>
+						<img style="margin-top:-30%;margin-left:30%;" width="200" height="250" data-src="../images/14/14s17.jpg">
+					</section>
+					<section>
+						<h2>VS tools (12)</h2>
+						<ul>	
+							Exporting to Excel
+							<li>Results from load testing can be exported to Excel </li>
+							<li>Use the Create Excel Report option in the toolbar of the Load Test result editor </li>
+						</ul>
+						<img width="300" height="250" data-src="../images/14/14s18.jpg">
+					</section>					
+				</section>
+				
+				<section>
+					<section>
+						<h2>Taurus</h2>
+						<img width="300" height="200" src="../images/14/14tau.jpg">
+					</section>
+					<section>
+						<h2>Taurus (2)</h2>					
+						<ul> 
+							<li>
+								<a href="http://jmeter.apache.org/">JMeter</a> 
+								<ul> 
+									<li>Open-source</li>							
+									<li>Easy to use (once you've mastered it)</li>
+									<li>Pain point - Automation and integration with other system</li>
+									<li>Steep learning curve</li>
+								</ul>
+							</li>							
+							<li>
+								<a href="http://gettaurus.org/">Taurus</a> 
+								<ul> 
+									<li>Open source</li>							
+									<li>Extends and abstracts Jmeter</li>
+									<li>Simple way to run and analyze performance test</li>							
+									<li>Taurus is an acronym that stands for <b>Test Automation Running Smoothly</b>, which reflects its baseline mission</li>
+								</ul>
+							</li>
+						</ul>						
+					</section>
+					<section>
+						<h2>Taurus (3)</h2>					
+						<ul> 
+							PROS
+							<li>Extremely simple setup and upgrading</li>							
+							<li>Ability to execute existing JMeter (or Grinder or Gatling or Selenium) tests</li>
+							<li>The ability to create new tests from scratch using user- defined files</li>							
+							<li>Real-time reporting</li>							
+						</ul>						
+					</section>
+					<section>
+						<h2>Taurus (4)</h2>					
+						<ul> 
+							PROS
+							<li>Ability to integrate with Jenkins for Continuous integration of performance tests. Console stats and pseudo-graphic charts during the test execution</li>							
+							<li>Easy way to define flexible pass/fail criteria. In case the results exceed a threshold, it is possible to automatically mark test(s) as failed </li>
+							<li>Platform-independent- runs where Python and Java can run</li>
+						</ul>						
+					</section>
+					<section>
+						<h2>Taurus (5)</h2>
+						<ul>	
+							 Simple load test with 
+							<li>10 concurrent users,</li>
+							<li>ramp-up time of 1 minute</li>
+							<li>duration of 2.5 minutes</li>
+							<li>hitting an blazedemo.com site</li>
+							<li>with HTTP GET requests</li>
+						</ul>
+						 <br>will look as simple as:
+					</section>
+					<section>
+						<h2>Taurus (6)</h2>						
+						<pre><code>
+---
+execution:
+- concurrency: 10
+  ramp-up: 1m
+  hold-for: 2m30s
+  scenario: 
+    requests:
+	- url: http://blazedemo.com
+	  method: GET
+						</code></pre>
+						Couple of lines of simple human-readable language that represents a (more or less) complete load scenario
+					</section>					
+					<section>
+						<h2>Taurus (7)</h2>	
+						<p>
+						Let’s assume that the above YAML configuration is stored in <b>example.yml</b> file. In that case, you can invoke it as simple as: <b>bzt example.yml</b> Once you hit Enter, the Taurus engine will start the test execution, including: downloading the latest JMeter version (with the latest plugins) to the <b>~/.bzt/jmeter-taurus</b> folder
+						</p>
+						<pre><code>
+1.preparing the JMeter .jmx script based on the example.yml provided
+2.kicking off the actual JMeter test 
+3.displaying real-time statistics and basic ASCII-art graphs in the text console 
+4.printing a summary to the console upon the test’s completion 
+5.saving JMeter test results in format.
+						</code></pre>						
+					</section>
+				</section>
+				
+				<section>
+					<img width="900" height="500" data-src="../images/1qas.jpg">
+					evgenikostadinov@gmail.com
+				</section>		
+				
+				<section>
+					<section>
+						<h2>EXERCISE</h2>
+						<img style="border:0px solid #000; margin-left:-20%;" width="900" height="550" src="../images/14/14e1.png">				
+					</section>	
+				</section>				
+			</div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
