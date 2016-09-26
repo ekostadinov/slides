@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Shift left</title>
+		<meta name="author" content="Evgeni Kostadinov">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Shift left</h1>
+					<h3>test your system as you design it</h3>
+					<img width="400" height="200" data-src="images/shift-left-hi.png" alt="cube">
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>This is <b style="color:red;">NOT</b> about:</h2>
+						<p class="fragment">looking back</p>
+						<p class="fragment">monologue</p>
+						<p class="fragment"> selling futuristic ideas</p>
+						<p class="fragment"> enforcing "new" practices	</p>
+					</section>
+					<section>
+						<blockquote cite="https://en.m.wikipedia.org/wiki/Shift_left_testing">
+						&ldquo;This delay is particularly disturbing because from 45 percent to 65 percent of defects are introduced in the requirements, architecture, and design activities.&rdquo;
+						</blockquote>
+						~ Wikipedia
+					</section>
+				</section>
+
+				<section id="fragments">
+						<h2>SDLC</h2>
+						<p>If your SDLC looks like this:</p>
+						<img width="450" height="300" data-src="images/SDLC.jpg" alt="cube">
+						<p class="fragment"> You are doing it <b style="color:red;">wrong</b>!</p>
+				</section>
+
+				<section>
+						<h2>Something to consider</h2>
+						<ul>
+							<li>Software is <b style="color:red;">not delivered on time</b>?</li>
+							<li>Software development <b style="color:red;">costs are high</b>?</li>
+							<li>Software quality does <b style="color:red;">not meet standards</b>?</li>
+							<li>Testing is not proper, leading to <b style="color:red;">business losses</b>?</li>
+							<li>Used software development approaches are becoming <b style="color:red;">ineffective to curb the expectations</b>?</li>
+						</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Quality assurance</h2>
+						<img width="350" height="200" data-src="images/testing1.gif" alt="cube">
+					</section>
+					<section>
+						<h2>The Basics</h2>
+						<ul>
+							<li>Testing begins, NOT when something becomes testable, but instead at the moment there exists something that <b style="color:red;">needs testing</b>!</li>
+							<li>Early testing Ultimately <b style="color:red;">improves</b> faster time to market</li>
+							<li>Test reports should <b style="color:red;">NOT</b> look like this: </li>
+						</ul>
+						<img width="450" height="300" data-src="images/thumbs.gif" alt="thumbsup">
+					</section>
+					<section>
+						<h2>Manual & Exploratory testing</h2>
+						<ul>
+							<li>Is <b style="color:red;">not ad-hoc activity!</b></li>
+							<li>Requires plannig</li>
+							<li>Requires scheduling</li>
+							<li>Requires execution</li>
+							<li>Requires <b style="color:red;">reporting</b></li>
+							<li>Requires analysis</li>
+							<li>Requires skill</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Automation testing</h2>
+						<ul>
+							<li>Is <b style="color:red;">development</b> activity!</li>
+							<li>Is <b style="color:red;">integrated</b> development effort</li>
+							<li>Is something you can’t <b style="color:red;">‘bolt on’</b> into a system</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+						<h2>Shift left</h2>
+						<p>Model testing moves testing to the left side of the <b><i>V</i></b>s (V-model) by testing executable requirements, architecture, and design models. This shift enables testing to begin almost immediately, instead of waiting a long time (traditional), medium time (incremental), or a short time (Agile/DevOps) until software on the right side of the <b><i>V</i></b>s is available to test.</p>
+						<img width="350" height="200" data-src="images/defects-sqs.jpg" alt="cube">
+				</section>
+
+				<section>
+					<section>
+						<h2>Is 'Shift Left' A <a href="https://smartbear.com/learn/automated-testing/shifting-left-in-testing/">New</a> Idea?</h2>
+						<p>
+							In the 19<b style="color:red;">50</b>'s, programmers knew that it was better to start <b style="color:red;">testing earlier</b>
+						</p>
+						<img height="200" data-src="images/efficiency-effectiveness.png" alt="cube">
+					</section>
+				</section>
+
+				<section>
+						<h2>Benefits:</h2>
+						<ul>
+							<li>Bugs are found and fixed <b style="color:red;">early</b></li>
+							<li><b style="color:red;">Saving</b> time and resources</li>
+							<li>Allowing good test coverage</li>
+							<li>Better team work with developers and testers – this model minimizes frictional differences between them</li>
+							<li>Delivery of software is <b style="color:red;">expedited</b></li>
+							<li>Cost <b style="color:red;">effectiveness</b></li>
+						</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Main concept</h2>
+						<img height="400" data-src="images/blog-sqs-chart.jpg" alt="cube">
+					</section>
+				</section>
+
+				<section>
+						<h2>How to <b style="color:red;">get started</b>?</h2>
+						<ul>
+							<li>Here's where to start. Pick one small team/project, and have a tester work with them on a feature from the <b style="color:red;">very</b> beginning.</li>
+							<li><b style="color:red;">DEMAND QUALITY</b> and tests as definition of done.</li>
+							<li>No need to wait for the next project, <b style="color:red;">do it</b> next sprint.</li>
+						</ul>
+						<blockquote cite="http://techbeacon.com/were-all-testers-now-5-steps-get-ready-shift-left-automation">
+						&ldquo;But as it recently occurred to me: we're all testers now.&rdquo;
+						</blockquote>
+						~ Beyond QA - HP Enterprise
+				</section>
+
+				<section>
+					<section>
+						<h2>What to expect <b style="color:red;">from now on</b>?</h2>
+						<ul>
+							<li>Plan and create test cases in advance</li>
+							<li>Support a periodic cycle of integration testing for the components/applications under change </li>
+							<li>Prioritize, process, and resolve feedback by development teams within the feedback loop </li>
+							<li><b style="color:red;">Whatever testing you can perform shifts left </b> </li>
+						</ul>
+					</section>
+					<section>
+						<ul> What to expect from now on (2)
+							<li>Gather details about <b style="color:red;">testing priorities and focus</b></li>
+							<li>Identify types of tests to be performed</li>
+							<li>Prepare Requirement Traceability Matrix <b style="color:red;">(RTM)</b></li>
+							<li>Identify <b style="color:red;">test environment</b> details where testing is supposed to be carried out</li>
+							<li>Automation feasibility analysis (if required)</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Now, remember again the SDLC from the begging of this presentation!</h2>
+					<img width="450" height="300" data-src="images/SDLC-agile.jpg">
+				</section>
+
+				<section>
+					<section>
+						<h2>Considerations</h2>
+						<img width="450" height="300" data-src="images/considerations.gif">
+					</section>
+					<section>
+						<h2>Overall </h2>
+						<ul>
+							<li>Identify <b style="color:red;">feedback</b> velocity and means to measure it </li>
+							<li><b style="color:red;">Scope</b> of automation pipeline (build, deploy, test) </li>
+							<li>Decide which changes will improve team’s <b style="color:red;">success</b> (versus introduce functionality) </li>
+							<li><b style="color:red;">Continuously improve</b> and plan for next steps (they will be needed) </li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+		  		<blockquote cite="https://www.amazon.com/Exploratory-Software-Testing-Tricks-Techniques/dp/0321636414">
+		  		&ldquo;The older model will, over time, make way for the newer model. This will be a case Darwinian natural selection played out in the matter of only a few short years. The fittest will survive with the timeframe determined by economics and quality of execution.&rdquo;
+		  		</blockquote>
+		  		~ J.A. Whittaker - Exlporatory software testing, 2009
+				</section>
+
+				<section>
+					<h2>THANK YOU!</h2>
+					<img width="450" height="300" data-src="images/qs.gif">
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
