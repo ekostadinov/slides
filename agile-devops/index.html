@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Agile culture</title>
+		<meta name="author" content="Evgeni Kostadinov">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<div>
+						<h1>Agile culture</h1>
+						<h3>How to be successful</h3>
+						<img width="400" height="200" data-src="images/agile-change.jpg" alt="cube">
+					</div>
+				</section>
+
+				<section>
+					<h2>Why are we doing this presentation?</h2>
+					<ul>
+						<li>Our projects get more and more <b style="color:red;">complex</b></li>
+						<li>Same goes for the <b style="color:red;">expectations and trust</b> from the clients</li>
+						<li>Software is <b style="color:red;">evolving</b> by nature, so does the company's environment.</li>
+						<li>Maybe <b style="color:red;">three years ago</b> it was enough to know or work only on one thing, <b style="color:red;">today</b> this is no longer relevant.</li>
+					</ul>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Agenda</h2>
+						<p class="fragment">People</p>
+						<p class="fragment">Main Agile concepts</p>
+						<p class="fragment">Shift-left QA</p>
+						<p class="fragment">Making Mistakes</p>
+						<p class="fragment">Why DevOps?</p>
+					</section>
+					<section>
+						<blockquote cite="https://watirmelon.blog/2013/12/11/five-signs-youre-not-agile-youre-actually-mini-waterfall/">
+						&ldquo;you’re not agile; you’re actually mini-waterfall&rdquo;
+						</blockquote>
+						~ Alister Scott
+					</section>
+				</section>
+
+				<section id="fragments">
+						<h2>SDLC</h2>
+						<p>If your SDLC looks like this:</p>
+						<img width="450" height="300" data-src="images/SDLC.jpg" alt="cube">
+						<p class="fragment"> You are doing it <b style="color:red;">wrong</b>!</p>
+				</section>
+
+				<!-- <section>
+						<h2>You want to maximize your productivity</h2>
+						<ul>
+							<li>Fixed release schedule</li>
+							<li>Fixed resources</li>
+							<li>Way too much to finish</li>
+							<li>Failure = Demotion, Job loss, or Pariah status</li>
+						</ul>
+				</section> -->
+
+				<section>
+					<section>
+						<h2>What is productivity</h2>
+						<ul>
+							<li>Work accomplished?</li>
+							<li>Work required to fix defects?</li>
+							<li>Work required to fix bad design decisions?</li>
+						</ul>
+						<p>
+							It is possible for productivity to be  <b style="color:red;">negative</b> when people end up doing more harm than good.
+						</p>
+					</section>
+					<section>
+						<h2>What is productivity?</h2>
+						<p>Productivity = <br> Effort <b style="color:red;">X</b> Competence <b style="color:red;">X</b> Environment <b style="color:red;">X</b> (2 <b style="color:red;">X</b> Motivation)</p>
+						<i>Henrik Kniberg</i>
+					</section>
+					<section>
+						<img src="images/alligned-autonomy.png" alt="alligned-autonomy">
+					</section>
+					<section>
+							<h2>Trust > Control</h2>
+							<img width="850" height="500" data-src="images/trust1.png" alt="cube">
+					</section>
+					<section>
+							<p><b>Trust</b> is more powerful than Control</p>
+							<img width="850" height="500" data-src="images/trust2.png" alt="cube">
+					</section>
+					<section>
+						<h2>We Trust You</h2>
+						<ul>
+							<li>We assume that people WANT to <b style="color:red;">act in the best interest</b> of the company</li>
+							<li>This is a self-fulfilling assumption!</li>
+							<li>Manage for the normal, treat exceptions as exceptional.</li>
+							<li>What are you doing? <b style="color:red;">VS</b> What do you need?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>More Agile teams</h2>
+							Projects are handeld by small <b style="color:red;">cross-functional</b> teams
+							<img width="350" height="300" data-src="images/teams.png" alt="cube">
+					</section>
+					<section>
+						<h2>Re-think the teams</h2>
+						<img width="650" height="350" data-src="images/t-shaped-team.png" alt="t-shaped">
+						<p>Jr. breadth tasks on rotation within the teams.</p>
+						<p>Team as one - commit to all tasks as single deliverable.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Agile Estimates</h2>
+						<ul>
+							What percentage of team capacity should be officially scheduled?
+							<li>110% to promote people to “stretch”?</li>
+							<li>100% because that is what they can do?</li>
+							<li>80% because slacking is good?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Agile Estimates</h2>
+						<ul>
+							Scheduling at <b style="color:red;">80%</b> produces better products
+							<li>Scheduling people at 100% doesn’t give space to think of creative solutions</li>
+							<li>Not lost time - Passionate people keep <b style="color:red;">thinking</b></li>
+							<li>The 20% goes into new idea generation and process improvements ... or testing ... ha-ha</li>
+							<li>Producing 20 <b style="color:red;">great</b> features is usually far more profitable than producing 100 competent features</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Making Mistakes</h2>
+						<ul>
+							<li>Failure Recovery > Failure Avoidance</li>
+							<li>Fail fast => Learn fast => Improve fast</li>
+						</ul>
+						<img height="200" data-src="images/mistakes.png" alt="mistakes">
+					</section>
+					<section>
+						<img height="400" width="600" data-src="images/efficiency-effectiveness.png" alt="cube">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>DevOps</h2>
+						<img height="400" width="600" src="images/devops.jpg" alt="devops">
+					</section>
+					<section>
+						<h2>DevOps culture</h2>
+						<img src="images/devops-pyramid.jpg" height="400" width="600" alt="">
+					</section>
+					<section>
+						<h2>Not just buzz words</h2>
+						<img src="images/hipster.png" height="400" width="600" alt="">
+					</section>
+				</section>
+
+				<section>
+					<h2>I still don't get it</h2>
+					<p class="fragment">Remember the SDLC diagram from the beginning?</p>
+					<p class="fragment">In current setup, Software is broken, untill proven working in the testing phase.</p>
+					<p class="fragment">CI gives you confidence that the software is <b style="color:red;">working untill proven broken</b>!</p>
+				</section>
+
+				<section>
+					<h2>THANK YOU!</h2>
+					<img width="450" height="300" data-src="images/qs.gif">
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
